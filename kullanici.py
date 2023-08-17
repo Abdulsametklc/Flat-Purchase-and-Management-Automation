@@ -17,7 +17,7 @@ def kullanici_menu():
                 fiyat = float(fiyat_str)
                 if min_fiyat <= fiyat <= max_fiyat:
                     uygun_daireler.append(veri) # Kullanıcın istediği bilgileri alarak, filtreleme işlemi yapıyoruz.
-            except ValueError: # Oluşacak dönüşüm hatasında program except ValueError programına girere ve hatayı görmezden gelerek işlemine devam eder.
+            except ValueError: # Oluşacak dönüşüm hatasında program except ValueError bloğuna girip ve hatayı görmezden gelerek işlemine devam eder.
                 continue
     if not uygun_daireler:
         print("Üzgünüz, istediğniz özelliklere uygun daire bulunamadı.")
@@ -29,7 +29,7 @@ def kullanici_menu():
         
     while True:    
         satın_alma_islemi = input("Listeden satın alma işlemi gerçekleştirecek misiniz?")
-        if satın_alma_islemi.lower() == "hayır":# lower fonskiyonu ile yazı formatı sıkıntısını engelliyoruz. EVET, evet vb. cevapları geçerli saymamıza yarıyor.
+        if satın_alma_islemi.lower() == "hayır":# lower() fonskiyonu ile yazı formatı sıkıntısını engelliyoruz. EVET, evet vb. cevapları geçerli saymamıza yarıyor.
             print("İyi Günler!")
             break 
         elif satın_alma_islemi.lower() != "evet":
